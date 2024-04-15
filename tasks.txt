@@ -1,2 +1,3 @@
 projektas|padaryti projekta|Atlikta|Migle
 pasiruosti egzaminui|programavimo egzaminas|Atlikta|Migle
+Namai|Susitvarkyti namus|Nukelta|Migle

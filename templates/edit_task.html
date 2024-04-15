@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edit Task</title>
+    <title>Redaguoti užduotį</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -51,21 +51,21 @@
 </head>
 <body>
     <div class="container">
-        <h1>Edit Task</h1>
+        <h1>Redaguoti užduotį</h1>
         <form action="/edit_task/{{ task_id }}" method="post">
-            <label for="title">Title:</label>
+            <label for="title">Pavadinimas:</label>
             <input type="text" id="title" name="title" value="{{ task[0] }}" required>
-            <label for="description">Description:</label>
+            <label for="description">Aprašymas:</label>
             <textarea id="description" name="description" rows="4" required>{{ task[1] }}</textarea>
-            <label for="status">Status:</label>
+            <label for="status">Statusas:</label>
             <select id="status" name="status">
                 <option value="Neatlikta" {% if task[2] == 'Neatlikta' %}selected{% endif %}>Neatlikta</option>
                 <option value="Atlikta" {% if task[2] == 'Atlikta' %}selected{% endif %}>Atlikta</option>
                 <option value="Nukelta" {% if task[2] == 'Nukelta' %}selected{% endif %}>Nukelta</option>
             </select>
-            <label for="user">Assignee:</label>
+            <label for="user">Vartotojas:</label>
             <input type="text" id="user" name="user" value="{{ task[3] }}" required>
-            <button type="submit">Save Changes</button>
+            <button type="submit">Išsaugoti pakeitimus</button>
         </form>
     </div>
 </body>

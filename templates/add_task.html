@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add Task</title>
+    <title>Pridėti užduotį</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -58,21 +58,21 @@
 </head>
 <body>
     <div class="container">
-        <h1>Add Task</h1>
+        <h1>Pridėti užduotį</h1>
         <form action="/add_task" method="post">
-            <label for="title">Title:</label>
+            <label for="title">Pavadinimas:</label>
             <input type="text" id="title" name="title" required>
-            <label for="description">Description:</label>
+            <label for="description">Aprašymas:</label>
             <textarea id="description" name="description" rows="4" required></textarea>
-            <label for="status">Status:</label>
+            <label for="status">Statusas:</label>
             <select id="status" name="status">
                 <option value="Neatlikta">Neatlikta</option>
                 <option value="Atlikta">Atlikta</option>
                 <option value="Nukelta">Nukelta</option>
             </select>
-            <label for="user">Assignee:</label>
+            <label for="user">Vartotojas:</label>
             <input type="text" id="user" name="user" required>
-            <button type="submit">Add Task</button>
+            <button type="submit">Pridėti užduotį</button>
         </form>
     </div>
 </body>
