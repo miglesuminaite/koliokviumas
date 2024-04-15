@@ -1,2 +1,2 @@
-projektas|padaryti projekta|Neatlikta|atlikta
-parduotuve|nusipirkti produktu|Neatlikta|atlikta
+projektas|padaryti projekta|Atlikta|Migle
+pasiruosti egzaminui|programavimo egzaminas|Atlikta|Migle

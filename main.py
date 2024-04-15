@@ -30,7 +30,7 @@ def add_task():
     if request.method == 'POST':
         title = request.form['title']
         description = request.form['description']
-        status = 'Neatlikta'
+        status = request.form['status']  # Gauti užduoties statusą iš formos
         user = request.form['user']
         
         with open(TASKS_FILE, 'a') as file:
@@ -51,10 +51,11 @@ def delete_task(task_id):
 @app.route('/edit_task/<int:task_id>', methods=['GET', 'POST'])
 def edit_task(task_id):
     tasks = read_tasks()
-    task_data = tasks[task_id].split('|')
+    task_data = tasks[task_id].strip().split('|')
     if request.method == 'POST':
         task_data[0] = request.form['title']
         task_data[1] = request.form['description']
+        task_data[2] = request.form['status']
         task_data[3] = request.form['user']
         tasks[task_id] = '|'.join(task_data) + '\n'
         
